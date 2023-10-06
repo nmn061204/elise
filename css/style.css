@@ -1,0 +1,46 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+   }
+body{
+    background-color: #f5f5f5;
+}
+/* comom */
+.btn{
+
+}
+/*  */
+#header{
+    height: 120px;
+    background-color: #ccc;
+}
+#container{
+    display: flex;
+}
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    padding: 20px;
+}
+.content{  
+    flex-grow: 1;
+}
+.category-list{
+    list-style-type: none;
+}
+.category-list__item{
+    color: #000;
+    text-decoration: none;
+
+}
+.filter{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+}
+.product-list{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
