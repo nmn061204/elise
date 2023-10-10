@@ -42,23 +42,48 @@ for (let i = 0; i < dots.length; i++) {
     });
 }
 // phân trang
-// Lấy danh sách sản phẩm và nút phân trang
+// Lấy danh sách sản phẩm, nút phân trang và nút mũi tên
 const productList = document.querySelector('.list-products');
 const pageButtons = document.querySelectorAll('.page-btn');
+const prevPageButton = document.getElementById('prev-page-btn');
+const nextPageButton = document.getElementById('next-page-btn');
 
 // Số sản phẩm trên mỗi trang
 const productsPerPage = 8;
+let currentPage = 1;
 
 // Tính số lượng trang dựa trên số sản phẩm và sản phẩm trên mỗi trang
-const totalProducts = productList.children.length;
-const totalPages = Math.ceil(totalProducts / productsPerPage);
+let totalProducts = productList.children.length;
+let totalPages = Math.ceil(totalProducts / productsPerPage);
 
 // Hiển thị sản phẩm trên trang đầu tiên khi trang web được tải
-showPage(1);
+showPage(currentPage);
 
 // Gán sự kiện click cho nút phân trang
 pageButtons.forEach((button, index) => {
-  button.addEventListener('click', () => showPage(index + 1));
+  button.addEventListener('click', () => {
+    if (index === 0) {
+      // Nút "Trang trước"
+      if (currentPage > 1) {
+        currentPage--;
+      }
+    } else if (index === pageButtons.length - 1) {
+      // Nút "Trang tiếp theo"
+      if (currentPage < totalPages) {
+        currentPage++;
+      } else if (currentPage === totalPages && totalProducts % productsPerPage !== 0) {
+        // Tạo thêm trang nếu có sản phẩm dư
+        totalProducts = productList.children.length;
+        totalPages = Math.ceil(totalProducts / productsPerPage);
+        totalPages++;
+        currentPage = totalPages;
+      }
+    } else {
+      // Nút trang
+      currentPage = index;
+    }
+    showPage(currentPage);
+  });
 });
 
 // Hiển thị sản phẩm trên trang cụ thể và ẩn sản phẩm dư
@@ -76,6 +101,31 @@ function showPage(page) {
   for (let i = startIndex; i < endIndex; i++) {
     productList.children[i].style.display = 'block';
   }
+  // Đổi màu nút phân trang
+  pageButtons.forEach((button) => {
+    const buttonPage = parseInt(button.getAttribute('data-page'));
+    if (buttonPage === page) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+  // Đánh dấu trạng thái của nút phân trang
+  pageButtons.forEach((button, index) => {
+    if (index === 0 && currentPage === 1) {
+      // Ẩn nút "Trang trước" khi ở trang đầu
+      button.style.display = 'none';
+    } else if (index === pageButtons.length - 1 && currentPage === totalPages) {
+      // Ẩn nút "Trang tiếp theo" khi ở trang cuối
+      button.style.display = 'none';
+    } else if (index === currentPage) {
+      // Đánh dấu trang hiện tại
+      button.classList.add('active');
+    } else {
+      button.style.display = 'inline';
+      button.classList.remove('active');
+    }
+  });
 }
 
   
