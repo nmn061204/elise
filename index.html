@@ -4,13 +4,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
-  <div id="header"></div>
+  <header class="header">
+    <div class="middle-content">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="header-left d-flex align-items-center">
+          <div class="action-menu-responsive">
+            <div class="action nav-togger">
+            </div>
+          </div>
+          <strong class="logo">
+            <img src="https://elise.vn/media/logo/default/logo_color.png" alt="Elise - Exclusive" width="167"
+              height="28" />
+          </strong>
+        </div>
+        <div class="header-center d-flex">
+          <div class="search-form">
+            <div class="form-search d-flex align-items-center">
+              <form action="" class="form minisearch" id="search_mini_form">
+                <span class="title-search">Tìm Kiếm</span>
+                <input id="search" class="input-text" type="text" maxlength="128" />
+                <button type="submit" title="Tìm Kiếm" class="button" disabled="">
+                  <i class="fa-solid fa-magnifying-glass fs-21"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="header-right d-flex flex-end align-items-center">
+          <div class="header-phone" data-role="stringee-area">
+            <div class="stringee-call-action d-flex align-items-center"><i
+                class="fa-solid fa-phone-flip fs-21 mr-10"></i><span>Gọi Ngay</span></div>
+          </div>
+
+          <div class="header-account ">
+            <div class=" is-canvas">
+              <span class="label"><i class="fa-regular fa-user fs-21 mr-10"></i></i>Tài Khoản</span>
+            </div>
+          </div>
+
+          <div class="cart">
+            <i class="fa-solid fa-bag-shopping fs-21"></i>
+          </div>
+          <div class="follow">
+            <i class="fa-regular fa-heart fs-21 hv"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="header-wrapper-end">
+
+    <div class="canvas canvas-customer-login">
+      <div class="close"><i class="fa-solid fa-xmark"></i></i></div>
+      <div class="canvas-content-wrapper">
+        <div class="title uppercase"><span>Đăng nhập</span></div>
+        <div class="create-account">
+          <span>Bạn chưa có tài khoản?</span><a href="#" class="underline">Tạo tài khoản</a>
+        </div>
+      </div>
+      <form class="form form-login myaccount-form-login" action="https://elise.vn/customer/account/loginPost/"
+        method="post" id="login-form" novalidate="novalidate">
+        <input name="form_key" type="hidden" value="LPxjP7jomw24ewTt">
+        <div class="field-control email required">
+          <input name="username" placeholder="Địa chỉ email hoặc số điện thoại của bạn" value="" autocomplete="off"
+            id="email" type="text" class="input-text" title="Email">
+        </div>
+        <div class="field-control password required">
+          <input name="password" placeholder="Mật khẩu" type="password" autocomplete="off" class="input-text" id="pass"
+            title="Mật khẩu">
+        </div>
+        <div class=" action remind">
+          <a href="" class="underline">Quên mật khẩu?</a>
+        </div>
+        <div class="field choice mgs-gdpr-checkbox d-flex flex-start" style="margin-top: 10px;">
+          <input type="checkbox" style="width: 30px;margin-top: 5px;">
+          <label for="accept_gdpr" class="label"><span>Tôi đồng ý Điều kiện - Điều khoản &amp; Chính sách bảo mật của
+              Elise.</span></label>
+        </div>
+        <div class="actions-toolbar">
+          <button type="submit" class="action btn-login uppercase" name="send" id="send2">
+            <span>Đăng nhập</span></button>
+        </div>
+        </fieldset>
+      </form>
+      <div class="myaccount-socials-login">
+        <div class="btn-login-social login-facebook uppercase">
+          <a href="#" style="text-decoration: none;"><i class="fab fa-facebook-f"></i><span>Đăng nhập bằng
+              facebook</span></a>
+        </div>
+        <div class="btn-login-social login-google uppercase">
+          <a href="#" style="text-decoration: none;"><i class="fab fa-google-plus-g"></i><span>Đăng nhập bằng
+              google</span></a>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <div class="header-overlay"></div>
+  </section>
   <!-- slide show -->
   <div class="slideshow-container">
     <div class="slide fade">
@@ -29,322 +134,403 @@
     </div>
   </div>
   <div id="container">
-    <div class="categories">
-      <h2>
-        <i class=" icon-menu__categories fa-solid fa-bars"></i>
-        <span class="categories-tittle">Danh mục</span>
-      </h2>
-      <ul class="category">
-        <li class="category-item">Home</li>
-        <ul class="category-item">
-          all product
-          <li class="all-product__category-item">Áo</li>
-          <li class="all-product__category-item">Quần</li>
-          <li class="all-product__category-item">Giày</li>
-          <li class="all-product__category-item">Dép</li>
-          <li class="all-product__category-item">Balo</li>
-        </ul>
-      </ul>
-      <ul class="category">
-        <li class="category-item">Top Sellers</li>
-        <li class="category-item">SALE 50% OFF</li>
-      </ul>
-    </div>
-    <div class="content">
-      <h3 class="arival-text">ALL PRODUCT</h3>
 
-      <div class="list-products" id="product-list">
-
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+    <div class="content ">
+      <!-- top danh mục -->
+      <div class="my-5 backgroud-1 pb-5 rounded-3">
+        <div class="row justify-content-around">
+          <div class="d-flex justify-content-between align-items-center my-3 px-5 py-4">
+            <div class="bgcolor-primary " style="width: 10rem; height: 0.5rem;"></div>
+            <span class="">
+              <h3 class="text-dark fs-48 cursor-text " style="width: 23rem;">TOP DANH MỤC</h3>
             </span>
           </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
+
+          <div class="" style="width: 15rem;">
+            <div class="d-flex align-items-center">
+              <i class="fa-solid fa-bars fs-21 text-dark"></i>
+              <h3><span class="text-dark fs-30 ps-2">Danh mục</span></h3>
+            </div>
+            <ul class="list-unstyled px-5 no-line-break">
+              <li class="color-primary fs-18 opacity-90 category-hover">Trang chủ</li>
+              <li class="text-dark fs-18 opacity-90 category-hover">Giới thiệu</li>
+              <li class="text-dark fs-18 opacity-90 category-hover">Tất cả sản phẩm</li>
+              <li class="text-dark fs-18 opacity-90 category-hover">Tin tức</li>
+              <li class="text-dark fs-18 opacity-90 category-hover">Liên hệ</li>
+            </ul>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 15rem;">
+            <div class="image-container rounded-3">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image" alt="...">
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark text-decoration-none text-hover">#ÁO QUẦN</a>
+            </div>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 15rem;">
+            <div class="image-container rounded-3">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image" alt="...">
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark text-decoration-none text-hover">#GIÀY DÉP</a>
+            </div>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 15rem;">
+            <div class="image-container rounded-3">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image" alt="...">
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark text-decoration-none text-hover">#PHỤ KIỆN</a>
+            </div>
           </div>
         </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="image-container">
-            <img class="product-image__item" src="./img/product1.webp" alt="">
-            <span class="product-image__overlay">
-              <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
-              <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-          <div class="product-details">
-            <h3>
-              <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
-            </h3>
-            <div class="product-price">650.000đ</div>
-          </div>
-        </div>
-
       </div>
-      <div class="pagination">
-        <button class="page-btn" id="prev-page-btn">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="page-btn">1</button>
-        <button class="page-btn">2</button>
-        <button class="page-btn">3</button>
-        <button class="page-btn" id="next-page-btn">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        <!-- Thêm các nút trang khác tùy theo số trang -->
+
+      <!--sản phẩm mới  -->
+      <div class="my-5 pb-5 rounded-3">
+        <div class="row justify-content-around">
+          <div class="d-flex justify-content-between align-items-center my-3 p-5">
+            <span class="">
+              <h3 class="text-dark fs-48 cursor-text " style="width: 23rem;">SẢN PHẨM MỚI</h3>
+            </span>
+            <div class="d-flex align-items-center">
+              <a class="color-text text-decoration-none pe-3 text-hover" href="#">Xem thêm sản phẩm
+                <span><i class="fa-solid fa-caret-right"></i></span>
+              </a>
+              <div class="bgcolor-primary " style="width: 10rem; height: 0.5rem;"></div>
+            </div>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 19rem;">
+            <div class="image-container rounded-3 position-relative">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image " alt="...">
+                <div class="position-absolute top-0 start-0 text-white py-4 ms-2 triangle-up d-flex align-items-center justify-content-center">
+                  <div class="sale">-20%</div>
+                </div>
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark uppercase text-decoration-none text-hover">Bông tai dâu tây Celebratory</a>
+              <div class="d-flex align-items-center justify-content-around">
+                <div class="color-primary cursor-text">299.000<span class="text-decoration-underline">đ</span></div>
+                <div class=" text-black-50 text-decoration-line-through">360.000<span class="text-decoration-underline">đ</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class=" border-none cursor-pointer" style="width: 19rem;">
+            <div class="image-container rounded-3 position-relative">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image " alt="...">
+                <div class="position-absolute top-0 start-0 text-white py-4 ms-2 triangle-up d-flex align-items-center justify-content-center">
+                  <div class="sale">-20%</div>
+                </div>
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark uppercase text-decoration-none text-hover">Bông tai dâu tây Celebratory</a>
+              <div class="d-flex align-items-center justify-content-around">
+                <div class="color-primary cursor-text">299.000<span class="text-decoration-underline">đ</span></div>
+                <div class=" text-black-50 text-decoration-line-through">360.000<span class="text-decoration-underline">đ</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 19rem;">
+            <div class="image-container rounded-3 position-relative">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image " alt="...">
+                <div class="position-absolute top-0 start-0 text-white py-4 ms-2 triangle-up d-flex align-items-center justify-content-center">
+                  <div class="sale">-20%</div>
+                </div>
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark uppercase text-decoration-none text-hover">Bông tai dâu tây Celebratory</a>
+              <div class="d-flex align-items-center justify-content-around">
+                <div class="color-primary cursor-text">299.000<span class="text-decoration-underline">đ</span></div>
+                <div class=" text-black-50 text-decoration-line-through">360.000<span class="text-decoration-underline">đ</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" border-none cursor-pointer" style="width: 19rem;">
+            <div class="image-container rounded-3 position-relative">
+              <img src="https://bizweb.dktcdn.net/100/376/737/themes/894814/assets/banner_col_1.jpg?1676271560514"
+                class="card-img-top img-fluid image " alt="...">
+                <div class="position-absolute top-0 start-0 text-white py-4 ms-2 triangle-up d-flex align-items-center justify-content-center">
+                  <div class="sale">-20%</div>
+                </div>
+            </div>
+            <div class="card-body text-center ">
+              <a href="#" class="text-hover text-dark uppercase text-decoration-none text-hover">Bông tai dâu tây Celebratory</a>
+              <div class="d-flex align-items-center justify-content-around">
+                <div class="color-primary cursor-text">299.000<span class="text-decoration-underline">đ</span></div>
+                <div class=" text-black-50 text-decoration-line-through">360.000<span class="text-decoration-underline">đ</span></div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
       </div>
+
+      <!-- all product -->
+      <div>
+        <h3 class="arival-text">ALL PRODUCT</h3>
+        <div class="list-products" id="product-list">
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          <div class="product-card">
+            <div class="image-container">
+              <img class="product-image__item" src="./img/product1.webp" alt="">
+              <span class="product-image__overlay">
+                <i title="Thêm vào giỏ hàng" class="icon-product fa-solid fa-bag-shopping"></i>
+                <i title="Thông tin chi tiết" class="icon-product fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+            <div class="product-details">
+              <h3>
+                <a class="product-name" href="">ÁO KHOÁC DẠ MÀU NÂU</a>
+              </h3>
+              <div class="product-price">650.000đ</div>
+            </div>
+          </div>
+  
+          
+        </div>
+         <!-- btn phan  -->
+        <div class="pagination">
+          <button class="page-btn" id="prev-page-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="page-btn">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn" id="next-page-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+     
+     
     </div>
   </div>
-  <div id="footer"></div>
+  <div id="footer">
+    <div class="banner">
+
+    </div>
+  </div>
   <script src="./main.js"></script>
 </body>
 
