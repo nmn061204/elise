@@ -1,3 +1,14 @@
+// scroll header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+  
+    if (window.scrollY > 120) { 
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  });
+
 document.addEventListener("DOMContentLoaded", function () {
   // Lấy các phần tử HTML cần thiết
   var modal = document.querySelector(".canvas-customer-login");
