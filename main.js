@@ -37,46 +37,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Xử lý slideshow
-  var slideIndex = 0;
-  var timeout;
-
-  showSlides();
-
-  function showSlides() {
-      var i;
-      var slides = document.querySelectorAll(".slide");
-      var dots = document.querySelectorAll(".dot");
-
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-
-      slideIndex++;
-
-      if (slideIndex > slides.length) {
-          slideIndex = 1;
-      }
-
-      for (i = 0; i < dots.length; i++) {
-          dots[i].classList.remove("active");
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].classList.add("active");
-
-      if (timeout) {
-          clearTimeout(timeout);
-      }
-
-      timeout = setTimeout(showSlides, 3000); // Đổi ảnh mỗi 3 giây
+  let slideIndex = 0;
+  let timeout;
+  
+  showSlides(slideIndex);
+  
+  function showSlides(index) {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+  
+    // Ẩn tất cả các slide và loại bỏ lớp "active" cho tất cả các "dot"
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      dots[i].classList.remove("active");
+    }
+  
+    // Hiển thị slide hiện tại và đánh dấu "dot" tương ứng là "active"
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+  
+    // Tăng chỉ số slide hoặc quay lại slide đầu nếu cần
+    slideIndex = (index + 1) % slides.length;
+  
+    // Xóa timeout hiện tại và thiết lập timeout cho việc chuyển slide sau một khoảng thời gian
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => showSlides(slideIndex), 3000); // Chuyển slide mỗi 2 giây
   }
-
-  // Xử lý sự kiện khi người dùng nhấp vào các dot
-  var dots = document.querySelectorAll(".dot");
-  dots.forEach(function (dot, index) {
-      dot.addEventListener("click", function () {
-          slideIndex = index;
-          showSlides();
-      });
-    }); 
+  
+  // Xử lý sự kiện khi người dùng nhấp vào "dot"
+  let dots = document.getElementsByClassName("dot");
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", function () {
+      showSlides(i);
+    });
+  }
 });

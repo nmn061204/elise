@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  font-family: 'Helvetica Neue', sans-serif !important; 
+}
 
 * {
   padding: 0;
@@ -40,6 +43,9 @@ html {
 .fw-500 {
   font-weight: 500;
 }
+.fw-700{
+  font-weight: 700;
+}
 
 /* font size */
 .fs-16 {
@@ -73,7 +79,10 @@ html {
 }
 
 /* hover */
-
+.btn:hover{
+  background-color: #a68242 !important;
+  color: #fff;
+}
 .text-hover:hover {
   color: #a68242 !important;
 }
@@ -476,6 +485,16 @@ html {
 
 .slide {
   display: none;
+  animation: slideRightToLeft 0.5s ease;
+  width: 100%;
+}
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(100%); /* Slide phải */
+  }
+  to {
+    transform: translateX(0); /* Slide trái */
+  }
 }
 
 .fade {
@@ -521,7 +540,6 @@ html {
 /* content */
 
 #new-arrival-title {
-  font-family: 'Helvetica Neue', sans-serif !important;
   letter-spacing: 0.5px;
   line-height: 1.4;
   font-weight: 400;
