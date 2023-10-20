@@ -74,3 +74,77 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+
+var productList = document.getElementById("product-list");
+var pageButtons = document.querySelectorAll(".page-btn");
+
+var productsPerPage = 60;
+var currentPage = 1;
+var totalProducts = productList.children.length;
+var totalPages = Math.ceil(totalProducts / productsPerPage);
+
+// Hiển thị sản phẩm trên trang đầu tiên khi trang web được tải
+document.addEventListener("DOMContentLoaded", function () {
+  showPage(currentPage);
+});
+
+// Xử lý sự kiện khi người dùng nhấp vào nút phân trang
+pageButtons.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+        if (index === 0) {
+            if (currentPage > 1) {
+                currentPage--;
+            }
+        } else if (index === pageButtons.length - 1) {
+            if (currentPage < totalPages) {
+                currentPage++;
+            } else if (currentPage === totalPages && totalProducts % productsPerPage !== 0) {
+                totalProducts = productList.children.length;
+                totalPages = Math.ceil(totalProducts / productsPerPage);
+                totalPages++;
+                currentPage = totalPages;
+            }
+        } else {
+            currentPage = index;
+        }
+        showPage(currentPage);
+    });
+});
+
+// Hiển thị sản phẩm trên trang cụ thể
+function showPage(page) {
+    for (var i = 0; i < totalProducts; i++) {
+        productList.children[i].style.display = "none";
+    }
+
+    var startIndex = (page - 1) * productsPerPage;
+    var endIndex = Math.min(startIndex + productsPerPage, totalProducts);
+
+    for (var i = startIndex; i < endIndex; i++) {
+        productList.children[i].style.display = "block";
+    }
+
+    pageButtons.forEach(function (button, index) {
+        var buttonPage = parseInt(button.getAttribute("data-page"));
+        if (buttonPage === page) {
+            button.classList.add("active");
+        } else {
+            button.classList.remove("active");
+        }
+    });
+
+    pageButtons.forEach(function (button, index) {
+        if (index === 0 && currentPage === 1) {
+            button.style.display = "none";
+        } else if (index === pageButtons.length - 1 && currentPage === totalPages) {
+            button.style.display = "none";
+        } else if (index === currentPage) {
+            button.classList.add("active");
+        } else {
+            button.style.display = "inline";
+            button.classList.remove("active");
+        }
+    });
+}

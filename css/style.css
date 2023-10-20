@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body{
-  font-family: 'Helvetica Neue', sans-serif !important; 
+  font-family: 'Helvetica Neue', sans-serif; 
 }
 
 * {
@@ -34,12 +34,19 @@ body{
 .no-line-break {
   white-space: nowrap;
 }
+/* line-height */
+.lh-175{
+  line-height: 1.75;
+}
+/* padding */
 
 /* opacity */
 .opacity-90 {
   opacity: 0.9;
 }
-
+.fw-300{
+  font-weight: 300;
+}
 .fw-500 {
   font-weight: 500;
 }
@@ -48,20 +55,23 @@ body{
 }
 
 /* font size */
+.fs-15{
+font-size: 0.9375rem;
+}
 .fs-16 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .fs-17 {
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 
 .fs-18 {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .fs-21 {
-  font-size: 21px;
+  font-size: 1.3125rem;
   color: #4e4e4e;
   cursor: pointer;
 }
@@ -73,7 +83,12 @@ body{
 .fs-48 {
   font-size: 48px;
 }
-
+.m-20{
+  margin: 20px;
+}
+.mt-20{
+  margin-top: 20px;
+}
 .mr-10 {
   margin-right: 10px;
 }
@@ -85,6 +100,9 @@ body{
 }
 .text-hover:hover {
   color: #a68242 !important;
+}
+.text-hover-underline:hover{
+  text-decoration: underline;
 }
 
 .image-hover:hover {
@@ -111,7 +129,7 @@ body{
 .header {
   color: #000;
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 25px 40px;
   line-height: 80px;
   top: 0;
   left: 0;
@@ -142,7 +160,7 @@ body{
   display: inline-flex;
   margin-right: 15px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
@@ -176,7 +194,11 @@ body{
   visibility: visible;
   color: #000;
 }
-
+.header .header-right{
+  font-size: 0.9375rem;
+  font-weight: 400;  
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 .header-phone {
   cursor: pointer;
 }
@@ -470,6 +492,10 @@ body{
   right: 20px;
   cursor: pointer;
 }
+/* container */
+#container{
+  margin-top: 130px;
+}
 
 /* slide show */
 .img-side {
@@ -597,4 +623,40 @@ body{
   top: 10px;
   left: 10px;
   z-index: 8;
+}
+#product-list {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+/* phan trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.page-btn {
+  color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+
+.page-btn.active {
+background-color: #000;
+color: #fff !important;
+}
+.page-btn.active:hover {
+  background-color: #000;
+  color: #fff !important  ;
+  }
+  
+.page-btn:hover {
+color:  #a68242 !important;
 }
