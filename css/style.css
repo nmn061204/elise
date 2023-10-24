@@ -113,9 +113,7 @@ font-size: 0.9375rem;
   text-decoration: underline;
 }
 
-.image-hover:hover {
-  background-image: url('https://elise.vn/media/catalog/product/cache/bb52e54e5ec1828d48ae8bf7c98f9f69/f/f/ff2306391ocwopk1.jpg');
-}
+
 
 /* border */
 .border-none {
@@ -642,7 +640,11 @@ font-size: 0.9375rem;
   margin: 48px 0 30px;
   padding: 0 30px;
 }
-
+.image{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
 .product-card {
   position: relative;
   overflow: hidden;
@@ -650,7 +652,7 @@ font-size: 0.9375rem;
 
 .product-card .image-container {
   width: 100%;
-  height: 40rem;
+  max-height: 40rem;
 }
 
 .product-card .base-image {
@@ -659,7 +661,7 @@ font-size: 0.9375rem;
 }
 
 .image-container:hover .base-image {
-  display: none;
+  /* display: none; */
 }
 
 .image-container .hover-image {
@@ -667,7 +669,7 @@ font-size: 0.9375rem;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 1s ease;
   max-width: 100%;
   height: auto;
 }
